@@ -522,6 +522,7 @@ function fetchFromIndexedDB(db, key) {
 }
 
 function fetchOrDownloadAndStore(db, url, responseType) {
+	url = "fakeRepo/" + url;
 	return new Promise(function(resolve, reject) {
 		fetchFromIndexedDB(db, url)
 		.then(function(data) { return resolve(data); })
